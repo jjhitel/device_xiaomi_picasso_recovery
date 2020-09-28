@@ -116,15 +116,15 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_METADATA_PARTITION := true
 
 # TWRP specific build flags
-TW_DEVICE_VERSION := 3 by hadenix & masemoel   # Set Developers
+TW_DEVICE_VERSION := 4 by hadenix & masemoel   # Set Developers
 TW_THEME := portrait_hdpi                      # Device resolution
 BOARD_HAS_NO_REAL_SDCARD := true               # Disables things like sdcard partitioning and may save you some space if TWRP isn't fitting in your recovery patition
 RECOVERY_SDCARD_ON_DATA := true                # this enables proper handling of /data/media on devices that have this folder for storage
 TARGET_RECOVERY_QCOM_RTC_FIX := true           # This one is mainly to fix the wrong time and date
 TW_EXCLUDE_DEFAULT_USB_INIT := true            # Don't include default init.recovery.usb.rc, provide your own or use needed defines inside init.recovery.$DEVICE.rc
-TW_INCLUDE_NTFS_3G := true
+TW_INCLUDE_NTFS_3G := true                     # Include NTFS Filesystem Support
 TW_USE_TOOLBOX := true
-TW_INPUT_BLACKLIST := "hbtp_vm"                # blacklists an input device that interrupts touch processing
+TW_INPUT_BLACKLIST := "hbtp_vm"                # Optional: Disables virtual mouse
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness" # Path to the sysfs entry which controls the brightness
 TW_MAX_BRIGHTNESS := 2047                      # Configurable maximum brightness
 TW_DEFAULT_BRIGHTNESS := 1200                  # Set custom brightness, low is better
