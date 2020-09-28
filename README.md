@@ -19,8 +19,8 @@ Download TWRP's source and picasso's repos. Your local manifest should be someth
 Then go to the source folder and run:
 
 ```bash
-. build/envsetup.sh
-lunch omni_picasso-eng
+. build/envsetup.sh && lunch omni_picasso-eng
+export LC_ALL=C
 mka recoveryimage
 ```
 
