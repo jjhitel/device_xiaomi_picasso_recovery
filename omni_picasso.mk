@@ -20,8 +20,8 @@
 PRODUCT_RELEASE_NAME := picasso
 DEVICE_PATH := device/xiaomi/picasso
 
-# Inherit some common PitchBlack stuff.
-$(call inherit-product, vendor/pb/config/common.mk)
+# Inherit some common TWRP stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Device identifier. This must come after all inclusions
@@ -30,7 +30,6 @@ PRODUCT_NAME := omni_picasso
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi K30 5G
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_RELEASE_NAME := Redmi K30 5G
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT="Redmi/picasso/picasso:10/QKQ1.191117.002/20.1.13:user/release-keys" \
@@ -38,6 +37,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2099-12-31 \
-    ro.build.date=Thu May  7 00:11:59 CST 2020 \
-    ro.build.date.utc=1588781519
+    ro.vendor.build.security_patch=2099-12-31
