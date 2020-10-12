@@ -1,6 +1,6 @@
-![TWRP](https://gizchina.it/wp-content/uploads/2020/06/twrp-3-4-0-realme-oppo-aggiornamento-01.jpg "TWRP")
+![TWRP](https://github.com/Hadenix/Hadenix.github.io/blob/master/images/jjns.png "TWRP")
 
-TeamWin Recovery Project (TWRP) 3.4.0 for the Redmi K30 5G (picasso)
+TeamWin Recovery Project (TWRP) 3.x.x for the Redmi K30 5G (picasso)
 ======================================
 
 # How to build
