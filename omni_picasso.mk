@@ -31,10 +31,24 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi K30 5G
 PRODUCT_MANUFACTURER := Xiaomi
 
+# enable stock zip packages flash
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.allow.mock.location=1
+
+# Build info
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="Redmi/picasso/picasso:10/QKQ1.191117.002/20.1.13:user/release-keys" \
+    BUILD_FINGERPRINT="Redmi/picasso/picasso:10/QKQ1.191117.002/20.1.13:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=picasso \
+    PRODUCT_NAME=picasso \
     PRIVATE_BUILD_DESC="picasso-user 10 QKQ1.191117.002 20.1.13 release-keys"
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
+
+# Blacklist Properties
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+    ro.build.date \
+    ro.build.date.utc
