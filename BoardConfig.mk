@@ -16,8 +16,6 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/picasso
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -102,7 +100,7 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
 # TWRP stuff
-TW_DEVICE_VERSION := 7 by hadenix
+TW_DEVICE_VERSION := 9 by hadenix
 TW_THEME := portrait_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
@@ -114,6 +112,8 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
+TW_Y_OFFSET := 90
+TW_H_OFFSET := -90
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
@@ -128,3 +128,5 @@ TW_EXTRA_LANGUAGES := true
 
 # Misc
 ALLOW_MISSING_DEPENDENCIES=true
+TARGET_SUPPORTS_64_BIT_APPS := true	
+TARGET_USES_64_BIT_BINDER := true
