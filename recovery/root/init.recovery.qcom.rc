@@ -70,21 +70,33 @@ on property:ro.crypto.state=unsupported
     stop sbinqseecomd
     stop keymaster-4-0
     stop gatekeeper-1-0
+<<<<<<< Updated upstream
     stop servicemanager
+=======
+    #stop servicemanager
+>>>>>>> Stashed changes
     stop hwservicemanager
 
 on property:ro.crypto.state=unencrypted
     stop sbinqseecomd
     stop keymaster-4-0
     stop gatekeeper-1-0
+<<<<<<< Updated upstream
     stop servicemanager
+=======
+    #stop servicemanager
+>>>>>>> Stashed changes
     stop hwservicemanager
 
 on property:twrp.decrypt.done=true && property:twrp.all.users.decrypted=true
     stop sbinqseecomd
     stop keymaster-4-0
     stop gatekeeper-1-0
+<<<<<<< Updated upstream
     stop servicemanager
+=======
+    #stop servicemanager
+>>>>>>> Stashed changes
     stop hwservicemanager
 
 
