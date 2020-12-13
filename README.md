@@ -1,7 +1,18 @@
-![TWRP](https://github.com/Hadenix/Hadenix.github.io/blob/master/images/jjns.png "TWRP")
+TWRP device tree for Xiaomi Redmi K30 5G
 
-TeamWin Recovery Project (TWRP) 3.x.x for the Redmi K30 5G (picasso)
-======================================
+## Features
+
+Works:
+
+- ADB
+- Decryption of /data (It does not work on custom ROM, it is associated with non-augmented files for the vendor that are responsible for decryption)
+- Screen brightness settings
+- Correct screenshot color
+- MTP
+- Flashing (opengapps, roms, images and so on)
+- Backup/Restore (Needs more testing)
+- USB OTG
+- Vibration support
 
 # How to build
 Download TWRP's source and picasso's repos. Your local manifest should be something like:
