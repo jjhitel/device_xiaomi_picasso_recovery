@@ -1,6 +1,7 @@
 #<src>											<mnt_point>		<type>	<mnt_flags and options>	   			<fs_mgr_flags>
 
 system											/system	         ext4	  ro,barrier=1,discard	            wait,logical,first_stage_mount
+system_ext                                      /system_ext      ext4     ro,barrier=1,discard              wait,logical,first_stage_mount
 product											/product	     ext4	  ro,barrier=1,discard	            wait,logical,first_stage_mount
 vendor											/vendor	         ext4	  ro,barrier=1,discard	            wait,logical,first_stage_mount
 odm												/odm			 ext4	  ro,barrier=1,discard				wait,logical,first_stage_mount
@@ -29,7 +30,6 @@ odm												/odm			 ext4	  ro,barrier=1,discard				wait,logical,first_stage_m
 #/dev/block/bootdevice/by-name/splash			/splash	         emmc	  defaults							defaults,backup,display="Splash"
 #/dev/block/bootdevice/by-name/spunvm			/spunvm	         emmc	  defaults					        defaults,backup,display="Spunvm"
 #/dev/block/bootdevice/by-name/exaid			/exaid	         emmc	  defaults							defaults,backup,display="Exaid"
-
 
 # Removable storage
 /usb-otg	vfat	/dev/block/sdg1	/dev/block/sdg	flags=fsflags=utf8;storage;wipeingui;removable
