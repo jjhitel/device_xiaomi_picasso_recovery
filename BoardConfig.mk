@@ -56,6 +56,7 @@ BOARD_KERNEL_CMDLINE := \
     cgroup.memory=nokmem,nosocket \
     androidboot.init_fatal_reboot_target=recovery \
     androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE +=  androidboot.vbmeta.avb_version=1.0
 TARGET_KERNEL_ARCH       := arm64
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_BOOTIMG_HEADER_VERSION := 2
@@ -71,9 +72,6 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-
-# QCOM
-#TARGET_USE_SDCLANG := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := picasso
@@ -155,7 +153,7 @@ TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_EXTRA_LANGUAGES := true
 
 # For Version TWRP
-TW_DEVICE_VERSION := 2c by hadenix
+TW_DEVICE_VERSION := 3 by hadenix
 
 # Misc
 ALLOW_MISSING_DEPENDENCIES=true

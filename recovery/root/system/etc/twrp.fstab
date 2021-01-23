@@ -6,7 +6,7 @@ product											/product	     ext4	  ro,barrier=1,discard	            wait,log
 vendor											/vendor	         ext4	  ro,barrier=1,discard	            wait,logical,first_stage_mount
 odm												/odm			 ext4	  ro,barrier=1,discard				wait,logical,first_stage_mount
 /dev/block/bootdevice/by-name/cache	            /cache	         ext4     nosuid,noatime,nodev,barrier=1	wait
-/dev/block/bootdevice/by-name/userdata	        /data	         f2fs	  noatime,nosuid,nodev,nodiscard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier	fileencryption=ice;wrappedkey;keydirectory=/metadata/vold/metadata_encryption;latemount;wait
+/dev/block/bootdevice/by-name/userdata	        /data	         f2fs	  noatime,nosuid,nodev,nodiscard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier	fileencryption=aes-256-xts:aes-256-cts:v2+emmc_optimized+wrappedkey_v0
 /dev/block/bootdevice/by-name/boot	            /boot	         emmc	  defaults	                        defaults
 /dev/block/by-name/metadata	                    /metadata		 ext4	  noatime,nosuid,nodev,discard	wait,formattable,wrappedkey,first_stage_mount,backup,flashimg,display="Metadata"
 /dev/block/bootdevice/by-name/persist	        /persist	     ext4	  noatime,nosuid,nodev,barrier=1	wait,backup
